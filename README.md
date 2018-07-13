@@ -12,7 +12,7 @@ The easiest implementation is to create an alias that will mount two volumes in 
 
 
 ```bash
-alias aws='docker run --rm -ti -v $HOME/.aws:/home/aws-user/.aws -v `pwd`:/home/aws-user aws-cli:latest'
+alias aws='docker run --rm -ti -v $HOME/.aws:/home/aws-user/.aws -v `pwd`:/home/aws-user/workspace/ aws-cli:latest'
 ```
 
 #### Example
