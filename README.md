@@ -8,7 +8,8 @@ The image will install the latest CLI and create a new user using UID `1000` cal
 ### Usage
 The easiest implementation is to create an alias that will mount two volumes in the container:
 - The current path `[pwd]` to the `/home/aws-user` folder in the container. This will allow you to easily pass files to the CLI tool. 
-- The AWS Config folder found in `/home/aws-user/.aws'.
+- The AWS Config folder found in `/home/aws-user/.aws'
+
 
 ```bash
 alias awsd='docker run --rm -ti -v $HOME/.aws:/home/aws-user/.aws -v `pwd`:/home/aws-user aws-cli:latest'
@@ -19,6 +20,6 @@ alias awsd='docker run --rm -ti -v $HOME/.aws:/home/aws-user/.aws -v `pwd`:/home
 
 ### Build the Image
 ```bash
-docker built -t aws-cli
+docker build -t aws-cli
 ```
 
